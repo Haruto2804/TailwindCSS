@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+
+  <h1 class="bg-red-500">Static - Tiêu đề</h1>
+  <p class="bg-amber-300 text-5xl">Static - Thẻ p 1</p>
+  <p class="bg-blue-300 text-2xl mb-3">Static - Thẻ p2</p>
+
+  <div class="bg-gray-200
+    mb-7">
+    Relative
+    <div class="w-32 h-16 bg-green-400 relative top-4 left-4"></div>
+  </div>
+
+  <div class="relative w-64 h-32 bg-yellow-200 border-4 border-red-500">
+    <div class="absolute top-4 left-4 w-16 h-20 bg-blue-500">Absolute</div>
+  </div>
+  <div class="sidebar bg-cyan-500 fixed right-0 top-0 bottom-0 rounded">sidebar</div>
+
+  <div class="h-[300vh] bg-green-200 p-4 mt-5">
+    <div class="sticky top-5 bg-pink-600 p-4 text-white">Sticky Header</div>
+  </div>
+
+
+
+  <!-- INSET -->
+  <div class="bg-yellow-400 size-60 relative">
+    <div class="bg-blue-500 absolute inset-2 text-white">inset 2 cho 4 hướng</div>
+  </div>
+
+  <div class="bg-yellow-400 size-60 relative mt-5">
+    <div class="bg-blue-500 absolute inset-x-5 text-white">inset 2 hướng theo trục x trái phải</div>
+  </div>
+  <div class="bg-yellow-400 size-60 relative mt-5">
+    <div class="bg-blue-500 absolute inset-y-5 text-white">inset 2 hướng theo trục y trên dưới</div>
+  </div>
+    <div class="bg-yellow-700 size-60 relative mt-5">
+    <div class="bg-blue-500 absolute inset-0 text-white">inset 0 theo tất cả các hướng, chiếm hết container cha</div>
+  </div>
+</body>
+
+</html>

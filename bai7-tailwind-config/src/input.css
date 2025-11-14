@@ -1,0 +1,7 @@
+@import "tailwindcss";
+/* @config "../tailwind.config.js" */
+@theme {
+  --color-tuychon: #2233CC;
+  --color-tuychon2-100: #22FFCC;
+  --color-tuychon2-500: #22FFFF;
+}

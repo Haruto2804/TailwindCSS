@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+  <div class = "bg-blue-500 text-white h-50 relative">
+    Display block: 
+    <h1 class = "bg-yellow-300 my-3">Lorem ipsum dolor sit amet.</h1>
+    <p class = "bg-cyan-500">Lorem ipsum dolor sit.</p>
+    <div class="absolute left-15 top-25 bg-pink-500">Display block: Mỗi 1 phần tử html nếu dưới dạng block thì sẽ chiếm hết dòng đó.</div>
+  </div>
+
+  <div class = "bg-blue-500 text-white h-50 relative mt-20">
+
+
+    Inline: 
+    <span class = "size-30 bg-yellow-300 my-3">Lorem ipsum dolor sit amet.</span>
+
+    <span class = "bg-cyan-500">Lorem ipsum dolor sit.</span>
+    <div class="absolute left-15 top-25 bg-pink-500">Inline: nghĩa là mỗi 1 phần tử chỉ chiếm vừa đủ nội dung của nó thôi, không độc chiếm hết cả dòng như block, và inline thì ta không thể xét
+      kích thước được cho inline,
+      <span class = "bg-green-400">ta nhìn vào thẻ span, khi xét size-30: 
+
+        không thể đặt kích thước cho thẻ span 
+        này vì thẻ này mặc định là inline.</span>
+    </div>
+  </div>
+
+<div class = "bg-blue-500 text-white h-50 relative mt-20">
+
+
+    Inline block: 
+    <span class = "inline-block size-30 bg-yellow-300 my-3">Lorem ipsum dolor sit amet.</span>
+
+    <span class = "bg-cyan-500">Lorem ipsum dolor sit.</span>
+    <div class="absolute left-15 top-25 bg-pink-500">Inline: nghĩa là mỗi 1 phần tử chỉ chiếm vừa đủ nội dung của nó thôi, không độc chiếm hết cả dòng như block, và inline thì ta không thể xét
+      kích thước được cho inline,
+      <span class = "bg-green-400">ta nhìn vào thẻ span, khi xét size-30: 
+        ta có thể đặt kích thước cho thẻ span 
+        này vì thẻ này ta đã ép kiểu cho nó là inline-block.</span>
+    </div>
+
+  </div>
+</body>
+</html>
