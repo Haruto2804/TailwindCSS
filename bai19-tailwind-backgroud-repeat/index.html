@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Background Repeat Visual</title>
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="p-4">
+<div class="p-8 space-y-8 bg-gray-50">
+
+    <h2 class="text-xl font-bold text-gray-800">Các Chế Độ Lặp Lại Hình Nền Toàn Diện</h2>
+
+    <div class="hidden bg-size-[50px_50px]" id="base-size"></div> 
+
+    <hr>
+
+    <div class="
+        bg-[url('/pattern.png')] 
+        size-80 bg-gray-200 border-4 border-black
+        bg-repeat                  
+        bg-size-[50px_50px]
+    ">
+        <p class="p-2 text-white bg-black/70 font-semibold">1. bg-repeat (Lặp X & Y, Bị cắt)</p>
+    </div>
+    
+    <hr>
+
+    <div class="
+        bg-[url('/pattern.png')]
+        size-80 bg-gray-200 border-4 border-black
+        bg-repeat-space            // CSS: background-repeat: space;
+        bg-size-[50px_50px] 
+    ">
+        <p class="p-2 text-white bg-black/70 font-semibold">2. bg-repeat-space (Giãn cách đều)</p>
+    </div>
+
+    <hr>
+
+    <div class="
+        bg-[url('/pattern.png')]
+        size-80 bg-gray-200 border-4 border-black
+        bg-repeat-round            // CSS: background-repeat: round;
+        bg-size-[50px_50px] 
+    ">
+        <p class="p-2 text-white bg-black/70 font-semibold">3. bg-repeat-round (Co giãn)</p>
+    </div>
+
+    <hr>
+
+    <div class="
+        bg-[url('/pattern.png')]
+        size-80 bg-gray-200 border-4 border-black
+        bg-no-repeat               // CSS: background-repeat: no-repeat;
+        bg-center                  // Thêm căn giữa
+        bg-size-[50px_50px] 
+    ">
+        <p class="p-2 text-white bg-black/70 font-semibold">4. bg-no-repeat (Chỉ một lần, căn giữa)</p>
+    </div>
+
+    <hr>
+
+    <div class="
+        bg-[url('/pattern.png')]
+        size-80 bg-gray-200 border-4 border-black
+        bg-repeat-x                // CSS: background-repeat: repeat-x;
+        bg-size-[50px_50px] 
+    ">
+        <p class="p-2 text-white bg-black/70 font-semibold">5. bg-repeat-x (Chỉ lặp ngang)</p>
+    </div>
+
+    <hr>
+
+    <div class="
+        bg-[url('/pattern.png')]
+        size-80 bg-gray-200 border-4 border-black
+        bg-repeat-y                // CSS: background-repeat: repeat-y;
+        bg-size-[50px_50px] 
+    ">
+        <p class="p-2 text-white bg-black/70 font-semibold">6. bg-repeat-y (Chỉ lặp dọc)</p>
+    </div>
+    
+</div>
+</body>
+</html>
