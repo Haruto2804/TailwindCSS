@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Họa background-clip</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-gray-100 p-8">
+
+    <h1 class="text-3xl font-bold text-indigo-700 mb-8 border-b pb-2">Minh Họa Background Clip</h1>
+    <p class="mb-6 text-gray-700">Quan sát khu vực màu nền (xanh dương) được áp dụng trong từng phần tử.</p>
+
+    <div class="space-y-8 max-w-2xl mx-auto">
+        
+        <div class="p-6 border-8 border-dashed border-gray-400 rounded-lg bg-blue-500 bg-clip-border">
+            <h2 class="text-xl font-semibold mb-2">1. `bg-clip-border`</h2>
+            <p class="mb-2 text-sm text-gray-600">Áp dụng cho **Toàn bộ phần tử**, bao gồm cả viền (border).</p>
+            <div class="p-8 border-4 border-red-500 bg-indigo-500 text-white **bg-clip-border**">
+                Nền kéo dài đến phần viền (border).
+            </div>
+        </div>
+        
+        <div class="p-6 border-8 border-dashed border-gray-400 rounded-lg bg-blue-500 bg-clip-padding">
+            <h2 class="text-xl font-semibold mb-2">2. `bg-clip-padding`</h2>
+            <p class="mb-2 text-sm text-gray-600">Áp dụng **từ padding trở vào** (trừ phần viền border).</p>
+            <div class="p-8 border-4 border-red-500 bg-green-500 text-white **bg-clip-padding**">
+                Nền bắt đầu từ padding (không bao gồm viền đỏ).
+            </div>
+        </div>
+
+        <div class="p-6 border-8 border-dashed border-gray-400 rounded-lg bg-blue-500 bg-clip-content">
+            <h2 class="text-xl font-semibold mb-2">3. `bg-clip-content`</h2>
+            <p class="mb-2 text-sm text-gray-600">Áp dụng chỉ trong vùng nội dung (content box, trừ padding và border).</p>
+            <div class="p-8 border-4 border-red-500 bg-cyan-500 text-white bg-clip-content">
+                Nền chỉ nằm trong vùng chữ này (trừ padding và border).
+            </div>
+        </div>
+        
+        <div class="p-6 border-8 border-dashed border-gray-400 rounded-lg bg-blue-50">
+            <h2 class="text-xl font-semibold mb-2">4. `bg-clip-text` (Gradient Text Effect)</h2>
+            <p class="mb-2 text-sm text-gray-600">Áp dụng nền (thường là gradient) **chỉ bên trong chữ**. Cần thêm `text-transparent`.</p>
+            <p class=" bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-5xl font-bold text-transparent tracking-tight">
+                CHỮ CÓ NỀN GRADIENT
+            </p>
+            <p class="text-xs mt-2 text-red-500">
+                Lưu ý: Để `bg-clip-text` hoạt động, bạn phải đặt `text-transparent` (hoặc `-webkit-text-fill-color: transparent;`)
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

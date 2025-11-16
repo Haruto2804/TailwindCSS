@@ -1,0 +1,13 @@
+<svg id="bg-grid" xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+  <rect width="100" height="100" fill="#ff4d4d"></rect>        <!-- Top-left -->
+  <rect x="100" width="100" height="100" fill="#4da6ff"></rect> <!-- Top-center -->
+  <rect x="200" width="100" height="100" fill="#ffff66"></rect> <!-- Top-right -->
+
+  <rect y="100" width="100" height="100" fill="#ff9933"></rect> <!-- Mid-left -->
+  <rect x="100" y="100" width="100" height="100" fill="#ffffff"></rect> <!-- Center -->
+  <rect x="200" y="100" width="100" height="100" fill="#33cc33"></rect> <!-- Mid-right -->
+
+  <rect y="200" width="100" height="100" fill="#cc66ff"></rect> <!-- Bottom-left -->
+  <rect x="100" y="200" width="100" height="100" fill="#999999"></rect> <!-- Bottom-center -->
+  <rect x="200" y="200" width="100" height="100" fill="#000000"></rect> <!-- Bottom-right -->
+</svg>

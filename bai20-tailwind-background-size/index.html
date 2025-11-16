@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Background Size Example</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        /* Định nghĩa URL ảnh nền (Thay thế bằng URL ảnh của bạn) */
+        .bg-image {
+            background-image: url('https://placehold.co/250x250?text=Hello+Haruto');
+        }
+    </style>
+</head>
+<body class="p-8 bg-gray-100">
+
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">Minh họa Tailwind CSS: `background-size`</h1>
+
+    <div class="mb-8 p-4 bg-white rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold mb-3">1. `bg-cover` (background-size: cover) 🖼️</h2>
+        <p class="mb-2 text-gray-600">Ảnh nền sẽ **phủ kín** toàn bộ phần tử, có thể bị cắt bớt (clip) để đảm bảo không để lại khoảng trống nào. Tỷ lệ khung hình của ảnh vẫn được giữ nguyên.</p>
+        <div class="h-48 w-full border-4 border-blue-500 bg-image bg-no-repeat **bg-cover**">
+            </div>
+    </div>
+
+    <hr class="my-8">
+
+    <div class="mb-8 p-4 bg-white rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold mb-3">2. `bg-contain` (background-size: contain) 📦</h2>
+        <p class="mb-2 text-gray-600">Ảnh nền sẽ được thu nhỏ để **chứa trọn** (contain) bên trong phần tử mà không bị cắt bớt. Có thể xuất hiện khoảng trống (lặp lại) nếu kích thước ảnh không khớp với phần tử.</p>
+        <div class="h-48 w-full border-4 border-green-500 bg-image bg-no-repeat **bg-contain** bg-center">
+            </div>
+    </div>
+
+    <hr class="my-8">
+
+    <div class="p-4 bg-white rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold mb-3">3. `bg-auto` (background-size: auto) 📏</h2>
+        <p class="mb-2 text-gray-600">Kích thước ảnh nền được xác định bởi kích thước ảnh gốc hoặc mặc định (default behavior). Nếu không có `bg-no-repeat`, ảnh có thể lặp lại.</p>
+        <div class="h-48 w-full border-4 border-red-500 bg-image bg-center **bg-auto**">
+            </div>
+    </div>
+
+</body>
+</html>
