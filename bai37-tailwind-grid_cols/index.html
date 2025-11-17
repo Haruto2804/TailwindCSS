@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+  <header class="bg-blue-600 p-6 text-white text-center">
+    <h1 class="font-extrabold text-4xl sm:text-5xl">Dynamic Grid Showcase</h1>
+    <p class="text-lg mt-2">5-Column Layout with Spanning Items</p>
+  </header>
+
+  <div class="container mx-auto p-5">
+    <div class="grid grid-cols-5 gap-4 max-md:grid-cols-3">
+      
+      <div class="col-span-2 p-6 h-32 bg-indigo-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        Box 1 (col-span-2)
+      </div>
+
+      <div class="p-6 h-32 bg-pink-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 2
+      </div>
+      
+      <div class="p-6 h-32 bg-indigo-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 3
+      </div>
+
+      <div class="p-6 h-32 bg-pink-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 4
+      </div>
+      
+      <div class="p-6 h-32 bg-pink-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 5
+      </div>
+
+      <div class="p-6 h-32 bg-indigo-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 6
+      </div>
+      
+      <div class="col-span-3 p-6 h-32 bg-yellow-500 text-gray-900 font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        Box 7 (col-span-3)
+      </div>
+
+      <div class="p-6 h-32 bg-indigo-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 8
+      </div>
+
+      <div class="p-6 h-32 bg-pink-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 9
+      </div>
+      
+      <div class="p-6 h-32 bg-indigo-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 10
+      </div>
+
+      <div class="col-span-2 p-6 h-32 bg-pink-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+        Box 11 (col-span-2)
+      </div>
+
+      <div class="p-6 h-32 bg-indigo-500 text-white font-bold text-2xl 
+                  flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition duration-300">
+        Box 12
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>

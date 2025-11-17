@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Trực Quan về Thuộc Tính Columns trong Tailwind CSS</title>
+  <link rel="stylesheet" href="src/output.css">
+    <style>
+        /* Tùy chỉnh nhỏ để các ví dụ nhìn rõ ràng hơn */
+        .example-section {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body class="p-8 bg-gray-100">
+
+    <h1 class="text-3xl font-bold mb-10 text-center text-gray-800">Hiển Thị Các Lớp Tailwind CSS `columns`</h1>
+
+    <div class="max-w-7xl mx-auto space-y-12">
+
+        <div class="example-section">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-700">1. Cột Cố Định (Fixed Count)</h2>
+            <p class="mb-6 text-gray-600">Sử dụng `columns-3` và `columns-4` để chỉ định số lượng cột.</p>
+            
+            <div class="space-y-8 border-t pt-6">
+                <div>
+                    <h3 class="text-xl font-medium mb-2 text-indigo-500">columns-3 (3 Cột)</h3>
+                    <div class="columns-3 text-justify gap-6 p-4 border rounded bg-indigo-50/50">
+                        <p>Đây là đoạn văn bản minh họa cho việc chia thàn  h 3 cột đều nhau. Lưu ý rằng thuộc tính `gap-6` được sử dụng để tạo khoảng trống giữa các cột. Nội dung văn bản được lặp lại để đảm bảo đủ chiều cao cho việc chia cột. Việc sử dụng số lượng cột cố định (column-count) rất đơn giản nhưng có thể làm cho cột quá hẹp trên màn hình nhỏ hoặc quá rộng trên màn hình lớn.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-medium mb-2 text-indigo-500">columns-4 (4 Cột)</h3>
+                    <div class="columns-4 text-justify gap-4 p-4 border rounded bg-indigo-50/50">
+                         <p>Aenean nec ipsum sit amet erat tincidunt hendrerit. In hac habitasse platea dictumst. Quisque iaculis orci vel erat aliquet, a dapibus nisi bibendum. Sed vitae magna nec est luctus efficitur. Mauris ut justo eget libero volutpat euismod. Ut vitae massa non quam luctus tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur tincidunt elit a purus tincidunt, nec volutpat velit viverra. Phasellus eget nisl vel quam dignissim blandit.</p>
+                         <p>Nam non urna ut dolor posuere consectetur at ac felis. Proin sit amet sapien sit amet dolor dignissim dapibus. Fusce vel urna ac dolor facilisis aliquet. Vivamus euismod justo at odio gravida, at congue turpis finibus. Nullam sed arcu at mi bibendum interdum. Praesent eu risus at justo dapibus iaculis. Integer tristique velit non neque tempor, id gravida quam finibus.</p>
+                         <p>More text is better to demonstrate column balancing. Example text to show the flow. More text is better to demonstrate column balancing. Example text to show the flow. More text is better to demonstrate column balancing. Example text to show the flow. More text is better to demonstrate column balancing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-section">
+            <h2 class="text-2xl font-semibold mb-4 text-emerald-700">2. Chiều Rộng Tối Thiểu (Min Width)</h2>
+            <p class="mb-6 text-gray-600">Sử dụng `columns-3xs` (16rem/256px) và `columns-lg` (32rem/512px). **Hãy thay đổi kích thước trình duyệt** để thấy số lượng cột thay đổi linh hoạt!</p>
+            
+            <div class="space-y-8 border-t pt-6">
+                <div>
+                    <h3 class="text-xl font-medium mb-2 text-emerald-500">columns-3xs (Min Width: 16rem / 256px)</h3>
+                    <div class="columns-3xs text-justify gap-4 p-4 border rounded bg-emerald-50/50">
+                        <p>Với `columns-3xs`, trình duyệt sẽ cố gắng tạo ra nhiều cột nhất có thể, miễn là mỗi cột không hẹp hơn 16rem (256px). Trên màn hình lớn, bạn sẽ thấy nhiều cột hơn, trong khi trên màn hình di động, nó có thể chỉ còn 1 hoặc 2 cột. Đây là cách làm việc *responsive* (đáp ứng) tốt nhất cho bố cục nhiều cột.</p>
+                        <p>The goal of using `columns-3xs` is to prevent the columns from becoming too narrow on larger screens, ensuring optimal readability. If the container is wide enough for five 16rem columns, it will create five. If it only fits two, it will create two.</p>
+                        <p>Example text to show the flow. More text is better to demonstrate column balancing. Example text to show the flow. More text is better to demonstrate column balancing.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-medium mb-2 text-emerald-500">columns-lg (Min Width: 32rem / 512px)</h3>
+                    <div class="columns-lg text-justify gap-8 p-4 border rounded bg-emerald-50/50">
+                        <p>Lớp `columns-lg` định nghĩa chiều rộng tối thiểu lớn hơn nhiều (32rem / 512px). Điều này sẽ giới hạn số lượng cột, thường chỉ tạo ra 2 cột trên hầu hết các màn hình desktop, duy trì một độ dài dòng đọc lý tưởng cho văn bản.</p>
+                        <p>The column property is a powerful tool for typography on the web, allowing text to flow naturally without the need for complex grid layouts or media queries to adjust the number of columns. This larger minimum width ensures content is not overly fractured.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-section">
+            <h2 class="text-2xl font-semibold mb-4 text-red-700">3. Giá Trị Tùy Chỉnh (Custom Value)</h2>
+            <p class="mb-6 text-gray-600">Sử dụng `columns-[250px]` cho giá trị chính xác không có trong scale mặc định.</p>
+            
+            <div class="space-y-8 border-t pt-6">
+                <div>
+                    <h3 class="text-xl font-medium mb-2 text-red-500">columns-[250px] (Min Width: 250px)</h3>
+                    <div class="columns-[250px] text-justify gap-5 p-4 border rounded bg-red-50/50">
+                        <p>Ví dụ này sử dụng cú pháp JIT (Just-In-Time) để đặt chiều rộng cột tối thiểu chính xác là 250 pixels. Bạn có thể sử dụng bất kỳ giá trị CSS hợp lệ nào ở đây (ví dụ: `columns-[6]` để chỉ 6 cột, hoặc `columns-[10em]`).</p>
+                        <p>This provides granular control over the column layout. More text is included to fully demonstrate the column flow and balancing effect. The browser automatically determines the count based on the 250px minimum width and the container's available space.</p>
+                        <p>More text to fill the columns and demonstrate the adaptive layout based on the 250px minimum width. This is a powerful feature of Tailwind's JIT engine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

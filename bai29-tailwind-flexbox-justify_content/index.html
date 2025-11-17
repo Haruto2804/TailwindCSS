@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Trực Quan về justify-content trong Tailwind CSS</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        /* CSS tùy chỉnh để làm nổi bật các mục */
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #3b82f6; /* Blue 500 */
+            border-radius: 4px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Container chung cho tất cả các ví dụ */
+        .flex-container {
+            height: 100px; /* Chiều cao cố định để thấy rõ căn chỉnh */
+            border: 2px dashed #6b7280; /* Gray 500 */
+            border-radius: 8px;
+            background-color: #f3f4f6; /* Gray 100 */
+        }
+        /* Thiết lập màu nền cho dễ quan sát */
+        body {
+            background-color: #1f2937; /* Dark Gray */
+            color: #d1d5db; /* Light Gray */
+        }
+        .example-card {
+            background-color: #374151; /* Gray 700 */
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <h1 class="text-3xl font-bold mb-10 text-center text-cyan-400">Minh Họa Trực Quan `justify-content` (Trục Chính)</h1>
+
+    <div class="max-w-6xl mx-auto space-y-8">
+
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-start</h2>
+            <div class="flex flex-container justify-start">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">Các mục được nhóm lại ở **đầu** trục chính (bên trái theo mặc định).</p>
+        </div>
+
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-end</h2>
+            <div class="flex flex-container justify-end">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">Các mục được nhóm lại ở **cuối** trục chính (bên phải theo mặc định).</p>
+        </div>
+
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-center</h2>
+            <div class="flex flex-container justify-center">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">Các mục được nhóm lại ở **trung tâm** trục chính.</p>
+        </div>
+
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-between</h2>
+            <div class="flex flex-container justify-between">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">Mục đầu tiên ở đầu, mục cuối cùng ở cuối, và **khoảng trống đều** giữa các mục.</p>
+        </div>
+
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-around</h2>
+            <div class="flex flex-container justify-around">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">**Khoảng trống đều** giữa các mục, nhưng **khoảng trống ở hai đầu** chỉ bằng **một nửa** khoảng trống giữa các mục.</p>
+        </div>
+
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-evenly</h2>
+            <div class="flex flex-container justify-evenly">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">**Khoảng trống đều** giữa tất cả các mục, bao gồm cả **hai đầu** của container. Đây là cách phân phối khoảng trống đồng nhất nhất.</p>
+        </div>
+
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-stretch</h2>
+            <div class="flex flex-container justify-stretch">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">Mục sẽ được **kéo dài** (stretch) để lấp đầy không gian. Thường chỉ có tác dụng nếu các mục không có kích thước cố định (`width` / `max-width` không được đặt).</p>
+        </div>
+        
+        <div class="example-card">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">justify-normal / justify-baseline</h2>
+            <div class="flex flex-container justify-normal">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <p class="mt-2 text-sm text-gray-400">Các giá trị này thường **tương đương** với `justify-start` trong Flexbox và Grid, hoặc có ý nghĩa đặc biệt hơn trong Grid (như `justify-baseline` dùng để căn chỉnh theo đường cơ sở của văn bản, nhưng ít dùng trong Flexbox cho thuộc tính này).</p>
+        </div>
+
+        <div class="p-4 border border-yellow-500 rounded bg-yellow-900/50 mt-8">
+            <h3 class="text-lg font-bold text-yellow-300 mb-2">Về `*-safe` (Ví dụ: justify-center-safe)</h3>
+            <p class="text-sm">Các biến thể **`-safe`** (ví dụ: `justify-end-safe`, `justify-center-safe`) là một tính năng của CSS Layout Module (đặc biệt là Grid và Flexbox) nhằm đảm bảo rằng khi nội dung bị căn chỉnh, nó sẽ không bị tràn ra khỏi viewport (gây mất nội dung) một cách không thể phục hồi. Nếu nội dung bị tràn, trình duyệt sẽ tự động chuyển về hành vi của `justify-start`. Tuy nhiên, trong hầu hết các tình huống Flexbox và Grid thông thường, bạn sẽ ít thấy sự khác biệt so với các lớp không có `-safe`.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

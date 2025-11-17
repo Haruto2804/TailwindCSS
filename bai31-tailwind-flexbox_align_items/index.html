@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Tailwind align-items Cải tiến</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        /* CSS tùy chỉnh để làm nổi bật các phần tử con với màu sắc ngẫu nhiên */
+        .child {
+            width: 70px; /* Tăng chiều rộng để dễ nhìn */
+            padding: 10px;
+            font-size: 16px; /* Tăng cỡ chữ */
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            border-radius: 6px; /* Bo tròn góc */
+            margin: 0 4px; /* Thêm khoảng cách giữa các item */
+            display: flex; /* Dùng flex cho item để căn giữa nội dung */
+            align-items: center; /* Căn giữa nội dung trong item */
+            justify-content: center; /* Căn giữa nội dung trong item */
+        }
+        /* Tạo màu sắc ngẫu nhiên hơn cho các item */
+        .child:nth-child(1) { background-color: #ef4444; } /* red-500 */
+        .child:nth-child(2) { background-color: #f97316; } /* orange-500 */
+        .child:nth-child(3) { background-color: #eab308; } /* yellow-500 */
+        .child:nth-child(4) { background-color: #22c55e; } /* green-500 */
+        .child:nth-child(5) { background-color: #0ea5e9; } /* sky-500 */
+    </style>
+</head>
+<body class="p-8 bg-gray-50 font-sans">
+
+    <h2 class="text-3xl font-extrabold mb-8 text-gray-800 text-center">
+        🎯 Minh họa Căn chỉnh Trục Chéo (`align-items`) trong Tailwind CSS
+    </h2>
+    <p class="text-lg text-gray-600 mb-10 text-center max-w-2xl mx-auto">
+        Quan sát cách các lớp `items-*` thay đổi vị trí của các phần tử con theo chiều dọc (trục chéo) trong một Flex Container có chiều cao cố định.
+    </p>
+
+    <div class="space-y-12">
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-red-500">
+            <h3 class="text-2xl font-bold mb-4 text-red-700">1. `items-start` <span class="text-base font-normal text-gray-500">(align-items: flex-start;)</span></h3>
+            <div class="flex items-start h-40 w-full border-4 border-dashed border-red-300 bg-red-50 relative overflow-hidden">
+                <div class="child h-20">1</div>
+                <div class="child h-28">2</div>
+                <div class="child h-16">3</div>
+                <div class="child h-36">4</div>
+                <div class="child h-24">5</div>
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 text-sm text-red-700 font-bold bg-red-100 px-2 py-1 rounded-b-md">Trục chính</div>
+                <div class="absolute top-1/2 -translate-y-1/2 left-0 rotate-90 origin-bottom-left text-sm text-red-700 font-bold bg-red-100 px-2 py-1 rounded-t-md">Trục chéo</div>
+            </div>
+            <p class="mt-4 text-gray-700">Các phần tử được căn chỉnh lên đầu của trục chéo (chiều dọc).</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-green-500">
+            <h3 class="text-2xl font-bold mb-4 text-green-700">2. `items-center` <span class="text-base font-normal text-gray-500">(align-items: center;)</span></h3>
+            <div class="flex items-center h-40 w-full border-4 border-dashed border-green-300 bg-green-50 relative overflow-hidden">
+                <div class="child h-20">1</div>
+                <div class="child h-28">2</div>
+                <div class="child h-16">3</div>
+                <div class="child h-36">4</div>
+                <div class="child h-24">5</div>
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 text-sm text-green-700 font-bold bg-green-100 px-2 py-1 rounded-b-md">Trục chính</div>
+                <div class="absolute top-1/2 -translate-y-1/2 left-0 rotate-90 origin-bottom-left text-sm text-green-700 font-bold bg-green-100 px-2 py-1 rounded-t-md">Trục chéo</div>
+            </div>
+            <p class="mt-4 text-gray-700">Các phần tử được căn chỉnh vào giữa của trục chéo (chiều dọc).</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-blue-500">
+            <h3 class="text-2xl font-bold mb-4 text-blue-700">3. `items-end` <span class="text-base font-normal text-gray-500">(align-items: flex-end;)</span></h3>
+            <div class="flex items-end h-40 w-full border-4 border-dashed border-blue-300 bg-blue-50 relative overflow-hidden">
+                <div class="child h-20">1</div>
+                <div class="child h-28">2</div>
+                <div class="child h-16">3</div>
+                <div class="child h-36">4</div>
+                <div class="child h-24">5</div>
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 text-sm text-blue-700 font-bold bg-blue-100 px-2 py-1 rounded-b-md">Trục chính</div>
+                <div class="absolute top-1/2 -translate-y-1/2 left-0 rotate-90 origin-bottom-left text-sm text-blue-700 font-bold bg-blue-100 px-2 py-1 rounded-t-md">Trục chéo</div>
+            </div>
+            <p class="mt-4 text-gray-700">Các phần tử được căn chỉnh xuống cuối của trục chéo (chiều dọc).</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-purple-500">
+            <h3 class="text-2xl font-bold mb-4 text-purple-700">4. `items-baseline` <span class="text-base font-normal text-gray-500">(align-items: baseline;)</span></h3>
+            <div class="flex items-baseline h-40 w-full border-4 border-dashed border-purple-300 bg-purple-50 relative overflow-hidden">
+                <div class="child h-20 pt-8">A</div> <div class="child h-28 pt-12">B</div>
+                <div class="child h-16 pt-4">C</div>
+                <div class="child h-36 pt-16">D</div>
+                <div class="child h-24 pt-10">E</div>
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 text-sm text-purple-700 font-bold bg-purple-100 px-2 py-1 rounded-b-md">Trục chính</div>
+                <div class="absolute top-1/2 -translate-y-1/2 left-0 rotate-90 origin-bottom-left text-sm text-purple-700 font-bold bg-purple-100 px-2 py-1 rounded-t-md">Trục chéo</div>
+            </div>
+            <p class="mt-4 text-gray-700">Các phần tử được căn chỉnh dựa trên đường cơ sở của văn bản (baseline) bên trong chúng.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-yellow-500">
+            <h3 class="text-2xl font-bold mb-4 text-yellow-700">5. `items-stretch` <span class="text-base font-normal text-gray-500">(align-items: stretch;)</span></h3>
+            <div class="flex items-stretch h-40 w-full border-4 border-dashed border-yellow-300 bg-yellow-50 relative overflow-hidden">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+                <div class="child">5</div>
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 text-sm text-yellow-700 font-bold bg-yellow-100 px-2 py-1 rounded-b-md">Trục chính</div>
+                <div class="absolute top-1/2 -translate-y-1/2 left-0 rotate-90 origin-bottom-left text-sm text-yellow-700 font-bold bg-yellow-100 px-2 py-1 rounded-t-md">Trục chéo</div>
+            </div>
+            <p class="mt-4 text-gray-700">Các phần tử kéo dài để lấp đầy toàn bộ không gian có sẵn trên trục chéo (chiều dọc), bỏ qua các cài đặt chiều cao thủ công cho từng item (trừ khi có `align-self` riêng).</p>
+        </div>
+        
+    </div>
+
+</body>
+</html>

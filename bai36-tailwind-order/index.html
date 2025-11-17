@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ví dụ Tailwind order-*</title>
+  <link rel="stylesheet" href="src/output.css">
+  <style>
+    /* CSS tùy chỉnh cho các phần tử con */
+    .child {
+      width: 100px;
+      height: 60px;
+      margin: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: white;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body class="p-8 bg-gray-50 font-sans">
+
+  <h2 class="text-3xl font-extrabold mb-8 text-teal-700 text-center">
+    🔢 Minh họa `order-*` trong Tailwind CSS
+  </h2>
+  <p class="text-lg text-gray-600 mb-6 text-center max-w-2xl mx-auto">
+    Các item được định nghĩa trong HTML theo thứ tự A-B-C-D-E. Lớp `order-*` thay đổi thứ tự hiển thị.
+  </p>
+
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg border-4 border-teal-500">
+
+    <div class="text-sm text-teal-700 font-bold mb-2">Thứ tự HTML: A,B,C,D</div>
+
+    <div class="flex w-full border-4 border-dashed border-gray-400 bg-gray-100 p-4">
+
+      <div class="child bg-red-600 order-last">A (Last)</div>
+
+      <div class="child bg-gray-600 order-0">B (None)</div>
+
+      <div class="child bg-green-600 order-first">C (First)</div>
+
+      <div class="child bg-blue-600 order-1">D (Order 1)</div>
+      <div class="child bg-cyan-600 order-lastorder-2">E (order-2)</div>
+
+    </div>
+    <p class="mt-4 text-gray-700">
+      Thứ tự hiển thị (từ trái sang phải): C, B, D, A,E
+    </p>
+    <ul class="list-disc ml-6 mt-2 text-sm text-gray-700">
+      <li>`order-first`: Đặt item ở vị trí hiển thị đầu tiên (giá trị CSS là `-9999`).</li>
+      <li>`order-none`: Đặt item ở vị trí mặc định (giá trị CSS là `0`).</li>
+      <li>`order-1`: Đặt item ở vị trí có giá trị dương, nằm sau `order-none` và trước `order-last`.</li>
+      <li>`order-last`: Đặt item ở vị trí hiển thị cuối cùng (giá trị CSS là `9999`).</li>
+      <li>`order-(number)`: Số càng nhỏ thì độ ưu tiên càng cao</li>
+    </ul>
+
+  </div>
+
+  <h3 class="text-2xl font-bold mt-12 mb-4 text-teal-700">💡 Quy tắc sắp xếp</h3>
+  <p class="text-gray-700 max-w-4xl mx-auto">
+    Thứ tự các item được xác định bởi giá trị số của `order`:
+  </p>
+  <div class="max-w-4xl mx-auto p-4 bg-teal-100 rounded-lg border border-teal-300 mt-4 font-mono text-center">
+    order-first (rất âm) < <span class="font-bold">order-none (0)</span>
+      < order-1 < order-2 < ... < order-last (rất dương) </div>
+
+</body>
+
+</html>

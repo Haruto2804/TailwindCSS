@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Tailwind flex-wrap</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        /* CSS tùy chỉnh cho các phần tử con */
+        .child {
+            width: 120px; /* Chiều rộng cố định cho mỗi item */
+            height: 60px;
+            margin: 8px; /* Khoảng cách giữa các item */
+            flex-shrink: 0; /* Quan trọng: Ngăn item co lại khi dùng flex-nowrap */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8 bg-gray-50 font-sans">
+
+    <h2 class="text-3xl font-extrabold mb-8 text-indigo-700 text-center">
+        🔄 Minh họa các lớp `flex-wrap` trong Tailwind CSS
+    </h2>
+    <p class="text-lg text-gray-600 mb-10 text-center max-w-2xl mx-auto">
+        Quan sát cách các item xử lý không gian khi tổng chiều rộng của chúng lớn hơn container.
+    </p>
+
+    <div class="space-y-12">
+
+        <div class="max-w-xl mx-auto border-4 border-gray-300 p-4 rounded-lg bg-white">
+            <h3 class="text-xl font-bold mb-4 text-gray-800">Chiều rộng Container: 512px</h3>
+
+            <div class="mb-8 p-4 border-2 border-red-400 bg-red-50 rounded-lg">
+                <h4 class="text-lg font-semibold mb-2 text-red-700">1. `flex-nowrap` (flex-wrap: nowrap;)</h4>
+                <div class="flex flex-nowrap border-dashed border-red-300 overflow-x-hidden">
+                    <div class="child bg-red-600">Item 1</div>
+                    <div class="child bg-red-600">Item 2</div>
+                    <div class="child bg-red-600">Item 3</div>
+                    <div class="child bg-red-600">Item 4</div>
+                    <div class="child bg-red-600">Item 5</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-600">
+                    Tất cả item nằm trên một hàng duy nhất. Item có thể bị tràn ra ngoài container hoặc co lại (nếu không có `flex-shrink: 0`).
+                </p>
+            </div>
+
+            <div class="mb-8 p-4 border-2 border-green-400 bg-green-50 rounded-lg">
+                <h4 class="text-lg font-semibold mb-2 text-green-700">2. `flex-wrap` (flex-wrap: wrap;)</h4>
+                <div class="flex flex-wrap border-dashed border-green-300">
+                    <div class="child bg-green-600">Item 1</div>
+                    <div class="child bg-green-600">Item 2</div>
+                    <div class="child bg-green-600">Item 3</div>
+                    <div class="child bg-green-600">Item 4</div>
+                    <div class="child bg-green-600">Item 5</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-600">
+                    Item sẽ tự động ngắt xuống hàng mới khi không đủ không gian trên hàng hiện tại. Đây là chế độ bạn thường dùng nhất.
+                </p>
+            </div>
+
+            <div class="p-4 border-2 border-blue-400 bg-blue-50 rounded-lg">
+                <h4 class="text-lg font-semibold mb-2 text-blue-700">3. `flex-wrap-reverse` (flex-wrap: wrap-reverse;)</h4>
+                <div class="flex flex-wrap-reverse border-dashed border-blue-300">
+                    <div class="child bg-blue-600">Item 1</div>
+                    <div class="child bg-blue-600">Item 2</div>
+                    <div class="child bg-blue-600">Item 3</div>
+                    <div class="child bg-blue-600">Item 4</div>
+                    <div class="child bg-blue-600">Item 5</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-600">
+                    Tương tự như `flex-wrap`, nhưng thứ tự các hàng bị đảo ngược. Hàng đầu tiên (Item 1, 2, 3) sẽ nằm ở phía dưới, hàng tiếp theo (Item 4, 5) sẽ nằm ở phía trên.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

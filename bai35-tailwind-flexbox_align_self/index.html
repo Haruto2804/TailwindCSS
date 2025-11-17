@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ví dụ Tailwind align-self</title>
+  <link rel="stylesheet" href="src/output.css">
+  <style>
+    /* CSS tùy chỉnh cho các phần tử con */
+    .child {
+      width: 80px;
+      height: 60px;
+      margin: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: white;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body class="p-8 bg-gray-50 font-sans">
+
+  <h2 class="text-3xl font-extrabold mb-8 text-pink-700 text-center">
+    🎯 Minh họa `align-self` (`self-*`) - Ghi đè Căn chỉnh - Cross Axis
+  </h2>
+  <p class="text-lg text-gray-600 mb-6 text-center max-w-2xl mx-auto">
+    Container được đặt là `items-center` (màu xám). Item 2 và 4 sử dụng `self-*` để ghi đè cài đặt này.
+  </p>
+
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg border-4 border-pink-500">
+
+    <div class="text-sm text-pink-700 font-bold mb-2">Container Class: `flex items-center h-48`</div>
+
+    <div class="flex items-center h-48 w-full border-4 border-dashed border-gray-400 bg-gray-100 relative">
+
+      <div class="child bg-gray-700">1 (Center)</div>
+
+      <div class="child bg-red-600 self-start">2 (Start)</div>
+
+      <div class="child bg-gray-700">3 (Center)</div>
+
+      <div class="child bg-blue-600 self-end">4 (End)</div>
+
+      <div class="child bg-green-500 self-stretch w-20 h-100%">5 (Stretch)</div>
+
+      <div class="child bg-gray-700">6 (Center)</div>
+
+      <div class="absolute w-full top-1/2 left-0 border-t-2 border-gray-500 border-dotted"></div>
+    </div>
+    <p class="mt-4 text-gray-700">
+      Item 1, 3, 6 được căn giữa (Center) theo lớp `items-center`.<br>
+      Item 2 bị đẩy lên trên cùng (Start) nhờ lớp `self-start`.<br>
+      Item 4 bị đẩy xuống dưới cùng (End) nhờ lớp `self-end`.<br>
+      Item 5 kéo dài toàn bộ chiều cao container nhờ `self-stretch`.
+    </p>
+
+  </div>
+
+</body>
+
+</html>
