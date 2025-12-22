@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+  <div class="p-6 space-y-6">
+
+    <!-- auto-cols-auto -->
+    <h2 class="font-bold">auto-cols-auto</h2>
+    <div class="grid grid-flow-col auto-cols-auto gap-4 bg-gray-100 p-4">
+      <div class="bg-blue-400 p-2">1</div>
+      <div class="bg-blue-400 p-2">2</div>
+      <div class="bg-blue-400 p-2">3</div>
+      <div class="bg-blue-400 p-2">4</div>
+    </div>
+
+    <!-- auto-cols-min -->
+    <h2 class="font-bold">auto-cols-min</h2>
+    <div class="grid grid-flow-col auto-cols-min gap-4 bg-gray-100 p-4">
+      <div class="bg-green-400 p-2">Long text here...</div>
+      <div class="bg-green-400 p-2">2</div>
+      <div class="bg-green-400 p-2">3</div>
+    </div>
+
+    <!-- auto-cols-max -->
+    <h2 class="font-bold">auto-cols-max</h2>
+    <div class="grid grid-flow-col auto-cols-max gap-4 bg-gray-100 p-4">
+      <div class="bg-red-400 p-2">Long text here...</div>
+      <div class="bg-red-400 p-2">2</div>
+      <div class="bg-red-400 p-2">3</div>
+    </div>
+
+    <!-- auto-cols-fr -->
+    <h2 class="font-bold">auto-cols-fr</h2>
+    <div class="grid grid-flow-col auto-cols-fr gap-4 bg-gray-100 p-4">
+      <div class="bg-purple-400 p-2">1</div>
+      <div class="bg-purple-400 p-2">2</div>
+      <div class="bg-purple-400 p-2">3</div>
+    </div>
+
+    <!-- custom: auto-cols-[200px] -->
+    <h2 class="font-bold">auto-cols-[200px]</h2>
+    <div class="grid grid-flow-col auto-cols-[200px] gap-4 bg-gray-100 p-4">
+      <div class="bg-orange-400 p-2">1</div>
+      <div class="bg-orange-400 p-2">2</div>
+      <div class="bg-orange-400 p-2">3</div>
+    </div>
+
+  </div>
+  <!-- auto-rows-auto -->
+  <h2 class="font-bold mt-6">auto-rows-auto</h2>
+  <div class="grid grid-flow-row auto-rows-auto gap-4 bg-gray-100 p-4 w-56">
+    <div class="bg-blue-400 p-2">Item 1</div>
+    <div class="bg-blue-400 p-6">Item 2 cao hơn</div>
+    <div class="bg-blue-400 p-2">Item 3</div>
+  </div>
+  <!-- auto-rows-min -->
+  <h2 class="font-bold mt-6">auto-rows-min</h2>
+  <div class="grid grid-flow-row auto-rows-min gap-4 bg-gray-100 p-4 w-56">
+    <div class="bg-green-400 p-2">Item</div>
+    <div class="bg-green-400 p-10">Item cao nhưng hàng vẫn nhỏ nhất có thể</div>
+  </div>
+  <!-- auto-rows-max -->
+  <h2 class="font-bold mt-6">auto-rows-max</h2>
+  <div class="grid grid-flow-row auto-rows-max gap-4 bg-gray-100 p-4 w-56">
+    <div class="bg-red-400 p-2">Item</div>
+    <div class="bg-red-400 p-10">Item cao → hàng cao theo</div>
+  </div>
+  <!-- auto-rows-fr -->
+  <h2 class="font-bold mt-6">auto-rows-fr</h2>
+  <div class="grid grid-flow-row auto-rows-fr gap-4 bg-gray-100 p-4 w-56 h-64">
+    <div class="bg-purple-400 p-2">1</div>
+    <div class="bg-purple-400 p-2">2</div>
+    <div class="bg-purple-400 p-2">3</div>
+  </div>
+  <!-- auto-rows-<custom> -->
+  <h2 class="font-bold mt-6">auto-rows-[80px]</h2>
+  <div class="grid grid-flow-row auto-rows-[80px] gap-4 bg-gray-100 p-4 w-56">
+    <div class="bg-orange-400 p-2">1</div>
+    <div class="bg-orange-400 p-2">2</div>
+    <div class="bg-orange-400 p-2">3</div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Grid Examples</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Tùy chỉnh nhỏ để các tiêu đề không bị lộn xộn trong ví dụ 1 */
+        .grid-container-column {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+            background-color: #1f2937; /* bg-gray-900 */
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.5rem; /* rounded-lg */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b pb-2">
+        Ví dụ 1: Grid Column Utilities
+    </h2>
+    <div class="grid grid-cols-4 gap-4 bg-gray-900 p-6 rounded-lg shadow-xl mb-12">
+        <div class="col-span-2 bg-blue-500 text-white p-4 rounded-md font-semibold">
+            col-span-2 (Chiếm 2 cột)
+        </div>
+
+        <div class="col-span-full bg-red-600 text-white p-4 rounded-md font-semibold">
+            col-span-full (Chiếm toàn bộ 4 cột)
+        </div>
+
+        <div class="col-start-3 bg-green-500 text-white p-4 rounded-md font-semibold">
+            col-start-3
+        </div>
+
+        <div class="col-end-4 bg-yellow-500 text-white p-4 rounded-md font-semibold">
+            col-end-4
+        </div>
+
+        <div class="col-start-1 col-end-3 bg-purple-500 text-white p-4 rounded-md font-semibold">
+            col-start-1 col-end-3 (Chiếm 2 cột)
+        </div>
+
+        <div class="col-start-auto bg-pink-500 text-white p-4 rounded-md font-semibold">
+            col-start-auto
+        </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-gray-800 mb-6 border-b pb-2">
+        Ví dụ 2: Grid Row Utilities
+    </h2>
+    <div class="grid grid-cols-3 grid-rows-3 h-64 gap-4 bg-gray-900 p-6 rounded-lg shadow-xl">
+        <div class="row-span-2 col-span-1 bg-blue-500 text-white p-4 rounded-md flex items-center justify-center font-semibold">
+            row-span-2 (Chiếm 2 dòng)
+        </div>
+
+        <div class="row-span-full bg-red-600 text-white p-4 rounded-md flex items-center justify-center font-semibold">
+            row-span-full (Chiếm toàn bộ 3 dòng)
+        </div>
+        
+        <div class="row-start-3 col-start-2 bg-green-500 text-white p-4 rounded-md flex items-center justify-center font-semibold">
+            row-start-3
+        </div>
+
+        <div class="row-start-1 row-end-3 col-start-3 bg-purple-500 text-white p-4 rounded-md flex items-center justify-center font-semibold">
+            row-start-1 row-end-3 (Chiếm 2 dòng)
+        </div>
+
+        <div class="row-start-auto col-start-2 bg-pink-500 text-white p-4 rounded-md flex items-center justify-center font-semibold">
+            row-start-auto
+        </div>
+        
+    </div>
+</body>
+
+</html>
